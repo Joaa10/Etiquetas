@@ -1,0 +1,72 @@
+body{
+    background: burlywood;
+}
+.titulo{
+    --size: 64px;
+    text-align: center;
+    margin: 5rem 5rem 7rem;
+    font-family: Jost, sans-serif;
+    border:5px solid #fff;
+    border-radius: var(--size);
+    border-top-color: slateblue;
+    border-left-color: deeppink;
+    background: black;
+    
+    
+}
+#frase{
+    color: white;
+    animation-name: parpadeo;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  
+    -webkit-animation-name:parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+  }
+  
+  @-moz-keyframes parpadeo{  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes parpadeo {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+     100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {  
+    0% { opacity: 1.0; }
+     50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+.card{
+    --size: 64px;
+
+    display: inline-grid;
+    place-items: center;
+    gap: 1rem;
+    grid-template-columns: var(--size) 1fr;
+    border: 5px solid black;
+    border-bottom-color: slateblue;
+    border-right-color: deeppink;
+    border-radius: var(--size);
+    padding: 0.5rem 1rem;
+    margin: 1rem;
+    background: #fff;
+
+    & img{
+        width: var(--size);
+        height: var(--size);
+        border-radius: 50%;
+    }
+    & span{
+        font-family: Jost, sans-serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
+}
